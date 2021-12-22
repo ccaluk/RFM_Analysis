@@ -9,6 +9,8 @@ pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
 df_ = pd.read_excel("data/online_retail_II.xlsx", sheet_name="Year 2010-2011")
 df = df_.copy()
+df = df[df["Quantity"] > 0]
+df = df[df["Price"] > 0]
 
 #2
 
